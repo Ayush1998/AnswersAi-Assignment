@@ -1,0 +1,66 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.open {
+  background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: auto;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  right: -690px;
+  width: 690px;
+  height: 100%;
+  background-color: #0E0D0D;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 42px 32px 54px 32px;
+  border-left: 2px solid #525252;
+  animation: slide-in 0.5s both;
+}
+
+
+.open .slider {
+  right: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0E0D0D;
+  margin-bottom: 30px;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.closeButton {
+  color: #fff;
+  cursor: pointer;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  
+  to {
+    transform: translateX(0);
+  }
+}

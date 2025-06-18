@@ -1,0 +1,38 @@
+.topbar {
+    height: 88px;
+    width: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.leftContent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navItem {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 7px 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navItem:hover {
+  background-color: #242424;
+}
+
+.active {
+  background-color: #242424;
+  border: 0.5px solid #5A5A5A;
+}
+
+.rightContent {
+  width: 240px;
+}

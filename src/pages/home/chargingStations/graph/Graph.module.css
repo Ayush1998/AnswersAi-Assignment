@@ -1,0 +1,71 @@
+.heading {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.graphContainer {
+    width: 100%;
+    background: #222324;
+    padding: 30px 40px 30px 30px;
+    border-radius: 5px;
+    border: 1px solid #525252;
+}
+
+.dropdownContainer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 14px;
+}
+
+.dropdown {
+    background-color: #18181A80;
+    color: white;
+    font-size: 14px;
+    padding: 6px 6px 6px 15px;
+    border-radius: 5px;
+    border: 1px solid #525252;
+}
+
+.tooltipHeading {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.tooltipContainer {
+    padding: 20px;
+    border: 1px solid #525252;
+    background-color: #222324;
+    border-radius: 5px;
+    min-width: 200px;
+}
+
+.tooltipLabel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon {
+    color: #525252;
+}
+
+.tooltipContent {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #878787
+}
+
+.tooltipContentIcon {
+    margin-right: 10px;
+    color: #C8E972;
+}
+
+.container {
+    flex: 1.5;
+}
+
+

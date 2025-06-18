@@ -1,0 +1,48 @@
+.navbar {
+    height: 100vh;
+    width: 80px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 20px;
+}
+
+.topSection {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.iconBar {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+  color: #858882;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon:hover {
+  color: #fff;
+  background-color: #242424;
+}
+
+.active {
+  color: #fff;
+  background-color: #242424;
+  border: 0.5px solid #5A5A5A;
+}
+
+.userIcon {
+    color: #fff;
+}

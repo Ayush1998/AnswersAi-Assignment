@@ -1,0 +1,26 @@
+.keyPerformance {
+    flex: 1;
+}
+
+.header {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.heading {
+  color: white;
+  font-weight: 600;
+}
+
+.icon {
+    margin-left: 10px;
+}
+
+.kpiCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}

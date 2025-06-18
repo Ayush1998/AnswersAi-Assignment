@@ -1,0 +1,46 @@
+.leftContent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chargingHeading {
+    color: #DCFF7FFD;
+}
+
+.icon {
+    color: #C8E972;
+}
+
+.iconContainer {
+    padding: 5px 16px;
+    border: 1px solid #C8E972;
+    border-radius: 56px;
+    cursor: pointer;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.textContainer {
+    color: #C9FF3B;
+    font-size: 16px;
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 0.5px solid #C8E972;
+    border-radius: 6px;
+}
+
+.content {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
