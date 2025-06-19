@@ -1,8 +1,8 @@
 Setup Instruction
-  a. Create an .env file in root. I will share the .env config
-  b. run "npm install"
-  c. run "npm run dev"
-  d. Server will start
+  1. Create an .env file in root. I will share the .env config
+  2. run "npm install"
+  3. run "npm run dev"
+  4. Server will start at http://localhost:...
 
 Features Implimented - 
   1. Auth (Email/password and Google oAuth)
