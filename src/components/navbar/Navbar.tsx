@@ -34,7 +34,7 @@ const Navbar = () => {
                 <div 
                     key={index} 
                     className={`${styles.icon} ${isActive(item.path) ? styles.active : ''}`} 
-                    onClick={() => navigate(item.path)}
+                    onClick={() => navigate(`/${item.path}`)}
                 >
                     {item.icon}
                 </div>

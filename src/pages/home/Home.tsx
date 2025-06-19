@@ -16,6 +16,7 @@ const Home = () => {
     return (
         <Routes>
             <Route path="/" element={<ChargingStations />} />
+            <Route path="*" element={<ChargingStations />} />
         </Routes>
     )
 }
