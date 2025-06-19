@@ -1,54 +1,30 @@
-# React + TypeScript + Vite
+Setup Instruction
+  1. Create an .env file in root. I will share the .env config
+  2. run "npm install"
+  3. run "npm run dev"
+  4. Server will start at http://localhost:...
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features Implimented - 
+  1. Auth (Email/password and Google oAuth)
+  2. Routing and Private Route
+  3. Dynamic TopBar, currently setting homePage Topbar menu only
+  4. Slider for edit variables
+  5. Variable details will come if you hover on any variable for 1.5sec.
+  6. Reusable Variable Tile Component.
+  7. Added Primary Variable and secondary Variable section with expand functionality.
+  8. Added Graph with dummy value
+  9. Reusable Key Performance cards
+  10. Created Custom Components as per product requirement.
+  11. Once you signin if you click on user Icon you'll be logged out.
 
-Currently, two official plugins are available:
+Technical decisions and trade-offs -
+  1. Figma Design was not consistent so I had to write multiple css every time.
+  2. Figma Design was for 1440X992 screen size. You might see scroller in main content.
+  3. I have used Redux Toolkit for state management and used Atomic architecture for project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Known limitations -
+  1. Currently I'm not setting user in cookies so If you refresh the page you'll have to login again.
+  2. Mostly the UI will be responsive but I haven't added mobile and tablet css for now.
+  3. I have set only Home route only for all navbar click.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Time spent - I spent around 7 hours on this assignment.
