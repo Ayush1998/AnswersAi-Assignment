@@ -1,12 +1,13 @@
 // src/pages/Login.tsx
 import { useState } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './Auth.module.css';
-import { auth } from '../../firebase';
+import { auth, googleProvider } from '../../firebase';
 import type { RootState } from '../../store/Store';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser, toggleLoading } from '../../store/authStore/authSlice';
+import { FaGooglePlus } from 'react-icons/fa';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -39,6 +40,29 @@ const Login = () => {
     }
   };
 
+  const handleGoogleLogin = async () => {
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
+    const user = result.user;
+
+    dispatch(setUser({
+      uid: user.uid,
+      email: user.email,
+      displayName: user.displayName || '',
+      photoURL: user.photoURL || '',
+    }));
+
+    navigate('/home');
+  } catch (err) {
+    console.error('Google sign-in error:', err);
+    if (err instanceof Error) {
+      setError(err.message);
+    } else {
+      setError('An unexpected error occurred during Google sign-in.');
+    }
+  }
+};
+
   return (
     <div className={styles.container}>
       <div className={styles.formWrapper}>
@@ -67,6 +91,11 @@ const Login = () => {
             {loading ? 'Logging in...' : 'Log In'}
           </button>
         </form>
+
+        <button className={styles.googleButton} type="button" onClick={handleGoogleLogin}>
+          <FaGooglePlus className={styles.icon} size={20}/>
+          Sign in with Google
+        </button>
 
         <p className={styles.linkText}>
           Don't have an account? <Link to="/signup">Sign up</Link>
